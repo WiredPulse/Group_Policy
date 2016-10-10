@@ -1,10 +1,10 @@
-# Importing GPOs <br>
-<br>
-1 - Download GPOs and decide which one(s) you want to import.<br>
-2 - Create a new GPO on your server and name based on the GPO you will be importing.<br>
-3 - Right-click the newly created GPO and select "Import Settings".<br>
-4 - Click "Next" twice.<br>
-5 - Click "Browse" and navigate to the folder with the GPO in it (Example: GPOs\Allow WMI).<br>
-6 - Click "Ok" and then click "Next".<br>
-7 - Take note of the GPO description and then click "Next" twice.<br>
-8 - Click "Finish".<br>
+# Importing GPOs 
+
+1 - Download GPOs and decide which one(s) you want to import.
+2 - Create a new GPO on your server and name based on the GPO you will be importing.
+3 - Right-click the newly created GPO and select "Import Settings".
+4 - Click "Next" twice.
+5 - Click "Browse" and navigate to the folder with the GPO in it (Example: GPOs\Allow WMI).
+6 - Click "Ok" and then click "Next".
+7 - Take note of the GPO description and then click "Next" twice.
+8 - Click "Finish".
