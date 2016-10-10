@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (c) Microsoft Corporation.  All rights reserved. --><GroupPolicyBackupScheme bkp:version="2.0" bkp:type="GroupPolicyBackupTemplate" xmlns:bkp="http://www.microsoft.com/GroupPolicy/GPOOperations" xmlns="http://www.microsoft.com/GroupPolicy/GPOOperations">
+    <GroupPolicyObject><SecurityGroups><Group bkp:Source="FromDACL"><Sid><![CDATA[S-1-5-21-3259443097-3599676039-1305684680-519]]></Sid><SamAccountName><![CDATA[Enterprise Admins]]></SamAccountName><Type><![CDATA[UniversalGroup]]></Type><NetBIOSDomainName><![CDATA[SANDBOX]]></NetBIOSDomainName><DnsDomainName><![CDATA[sandbox.local]]></DnsDomainName><UPN><![CDATA[Enterprise Admins@sandbox.local]]></UPN></Group><Group bkp:Source="FromDACL"><Sid><![CDATA[S-1-5-21-3259443097-3599676039-1305684680-512]]></Sid><SamAccountName><![CDATA[Domain Admins]]></SamAccountName><Type><![CDATA[GlobalGroup]]></Type><NetBIOSDomainName><![CDATA[SANDBOX]]></NetBIOSDomainName><DnsDomainName><![CDATA[sandbox.local]]></DnsDomainName><UPN><![CDATA[Domain Admins@sandbox.local]]></UPN></Group></SecurityGroups><FilePaths/><GroupPolicyCoreSettings><ID><![CDATA[{BFD9A355-3D80-4D03-9F9C-86353E1B2BFB}]]></ID><Domain><![CDATA[sandbox.local]]></Domain><SecurityDescriptor>01 00 04 9c 00 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00 04 00 ec 00 08 00 00 00 05 02 28 00 00 01 00 00 01 00 00 00 8f fd ac ed b3 ff d1 11 b4 1d 00 a0 c9 68 f9 39 01 01 00 00 00 00 00 05 0b 00 00 00 00 00 24 00 ff 00 0f 00 01 05 00 00 00 00 00 05 15 00 00 00 99 27 47 c2 87 b2 8e d6 c8 2a d3 4d 00 02 00 00 00 02 24 00 ff 00 0f 00 01 05 00 00 00 00 00 05 15 00 00 00 99 27 47 c2 87 b2 8e d6 c8 2a d3 4d 00 02 00 00 00 02 24 00 ff 00 0f 00 01 05 00 00 00 00 00 05 15 00 00 00 99 27 47 c2 87 b2 8e d6 c8 2a d3 4d 07 02 00 00 00 02 14 00 94 00 02 00 01 01 00 00 00 00 00 05 09 00 00 00 00 02 14 00 94 00 02 00 01 01 00 00 00 00 00 05 0b 00 00 00 00 02 14 00 ff 00 0f 00 01 01 00 00 00 00 00 05 12 00 00 00 00 0a 14 00 ff 00 0f 00 01 01 00 00 00 00 00 03 00 00 00 00</SecurityDescriptor><DisplayName><![CDATA[Block Wireless - CPU Policy]]></DisplayName><Options><![CDATA[0]]></Options><UserVersionNumber><![CDATA[0]]></UserVersionNumber><MachineVersionNumber><![CDATA[196611]]></MachineVersionNumber><MachineExtensionGuids><![CDATA[[{0ACDD40C-75AC-47AB-BAA0-BF6DE7E7FE63}{2DA6AA7F-8C88-4194-A558-0D36E7FD3E64}]]]></MachineExtensionGuids><UserExtensionGuids/><WMIFilter/></GroupPolicyCoreSettings> 
+        <GroupPolicyExtension bkp:ID="{35378EAC-683F-11D2-A89A-00C04FBBCFA2}" bkp:DescName="Registry">
+            
+            
+            <FSObjectFile bkp:Path="%GPO_FSPATH%\Adm\*.*" bkp:SourceExpandedPath="\\Server2012R2.sandbox.local\sysvol\sandbox.local\Policies\{BFD9A355-3D80-4D03-9F9C-86353E1B2BFB}\Adm\*.*"/>
+        </GroupPolicyExtension>
+        
+        
+        
+        
+        
+        
+        <GroupPolicyExtension bkp:ID="{0ACDD40C-75AC-47AB-BAA0-BF6DE7E7FE63}" bkp:DescName="Wireless Group Policy" bkp:Win2KCompatible="false">
+            <DSObject bkp:Path="cn=Microsoft,%GPO_MACH_DSPATH%" bkp:ObjectClass="container" bkp:SourceExpandedPath="cn=Microsoft,cn=Machine,cn={BFD9A355-3D80-4D03-9F9C-86353E1B2BFB},CN=Policies,CN=System,DC=sandbox,DC=local">
+                <DSObject bkp:Path="cn=Windows,cn=Microsoft,%GPO_MACH_DSPATH%" bkp:ObjectClass="container" bkp:SourceExpandedPath="cn=Windows,cn=Microsoft,cn=Machine,cn={BFD9A355-3D80-4D03-9F9C-86353E1B2BFB},CN=Policies,CN=System,DC=sandbox,DC=local">
+                    
+                    <DSObject bkp:Path="cn=IEEE80211,cn=Windows,cn=Microsoft,%GPO_MACH_DSPATH%" bkp:ObjectClass="container" bkp:SourceExpandedPath="cn=IEEE80211,cn=Windows,cn=Microsoft,cn=Machine,cn={BFD9A355-3D80-4D03-9F9C-86353E1B2BFB},CN=Policies,CN=System,DC=sandbox,DC=local">
+                        <DSObject bkp:Path="*,cn=IEEE80211,cn=Windows,cn=Microsoft,%GPO_MACH_DSPATH%" bkp:ObjectClass="ms-net-ieee-80211-GroupPolicy" bkp:SourceExpandedPath="*,cn=IEEE80211,cn=Windows,cn=Microsoft,cn=Machine,cn={BFD9A355-3D80-4D03-9F9C-86353E1B2BFB},CN=Policies,CN=System,DC=sandbox,DC=local"><DSObject bkp:ObjectClass="ms-net-ieee-80211-GroupPolicy" bkp:Path="CN=Block Wifi,CN=IEEE80211,CN=Windows,CN=Microsoft,%GPO_MACH_DSPATH%" bkp:SourceExpandedPath="CN=Block Wifi,CN=IEEE80211,CN=Windows,CN=Microsoft,cn=Machine,cn={BFD9A355-3D80-4D03-9F9C-86353E1B2BFB},CN=Policies,CN=System,DC=sandbox,DC=local">
+                            <DSAttributeMultiString bkp:DSAttrName="description"><DSValue><![CDATA[Sample Description]]></DSValue></DSAttributeMultiString>
+                            <DSAttributeString bkp:DSAttrName="ms-net-ieee-80211-GP-PolicyGUID"><DSValue><![CDATA[{607dcfe3-d9ed-49f4-abf0-6e3ebc260b0f}]]></DSValue></DSAttributeString>
+                            <DSAttributeString bkp:DSAttrName="ms-net-ieee-80211-GP-PolicyData"><DSValue><![CDATA[<?xml version="1.0"?>
+<WLANPolicy xmlns="http://www.microsoft.com/networking/WLAN/policy/v1">
+	<name>Block Wifi</name>
+	<description>Sample Description</description>
+	<globalFlags>
+		<enableAutoConfig>true</enableAutoConfig>
+		<showDeniedNetwork>true</showDeniedNetwork>
+		<allowEveryoneToCreateAllUserProfiles>true</allowEveryoneToCreateAllUserProfiles>
+		<onlyUseGPProfilesForAllowedNetworks xmlns="http://www.microsoft.com/networking/WLAN/policy/v2">false</onlyUseGPProfilesForAllowedNetworks>
+		<enableSoftAP xmlns="http://www.microsoft.com/networking/WLAN/policy/v3">false</enableSoftAP>
+		<enableExplicitCreds xmlns="http://www.microsoft.com/networking/WLAN/policy/v3">false</enableExplicitCreds>
+		<enableWFD xmlns="http://www.microsoft.com/networking/WLAN/policy/v4">false</enableWFD>
+	</globalFlags>
+	<networkFilter>
+		<denyAllIBSS>true</denyAllIBSS>
+		<denyAllESS>true</denyAllESS>
+	</networkFilter>
+</WLANPolicy>
+]]></DSValue></DSAttributeString>
+                         </DSObject>
+                            <DSAttributeMultiString bkp:DSAttrName="description"/>
+                            <DSAttributeString bkp:DSAttrName="ms-net-ieee-80211-GP-PolicyGUID"/>
+                            <DSAttributeString bkp:DSAttrName="ms-net-ieee-80211-GP-PolicyData"/>
+                         </DSObject>
+                    </DSObject>
+                </DSObject>
+            </DSObject>
+        </GroupPolicyExtension>
+        
+        
+    <GroupPolicyExtension bkp:ID="{F15C46CD-82A0-4C2D-A210-5D0D3182A418}" bkp:DescName="Unknown Extension"><FSObjectDir bkp:Path="%GPO_MACH_FSPATH%\Applications" bkp:SourceExpandedPath="\\Server2012R2.sandbox.local\sysvol\sandbox.local\Policies\{BFD9A355-3D80-4D03-9F9C-86353E1B2BFB}\Machine\Applications" bkp:Location="DomainSysvol\GPO\Machine\Applications"/><FSObjectDir bkp:Path="%GPO_MACH_FSPATH%\Microsoft" bkp:SourceExpandedPath="\\Server2012R2.sandbox.local\sysvol\sandbox.local\Policies\{BFD9A355-3D80-4D03-9F9C-86353E1B2BFB}\Machine\Microsoft" bkp:Location="DomainSysvol\GPO\Machine\Microsoft"/><FSObjectDir bkp:Path="%GPO_MACH_FSPATH%\Microsoft\Windows NT" bkp:SourceExpandedPath="\\Server2012R2.sandbox.local\sysvol\sandbox.local\Policies\{BFD9A355-3D80-4D03-9F9C-86353E1B2BFB}\Machine\Microsoft\Windows NT" bkp:Location="DomainSysvol\GPO\Machine\Microsoft\Windows NT"/><FSObjectDir bkp:Path="%GPO_MACH_FSPATH%\Microsoft\Windows NT\SecEdit" bkp:SourceExpandedPath="\\Server2012R2.sandbox.local\sysvol\sandbox.local\Policies\{BFD9A355-3D80-4D03-9F9C-86353E1B2BFB}\Machine\Microsoft\Windows NT\SecEdit" bkp:Location="DomainSysvol\GPO\Machine\Microsoft\Windows NT\SecEdit"/><FSObjectFile bkp:Path="%GPO_MACH_FSPATH%\Microsoft\Windows NT\SecEdit\GptTmpl.inf" bkp:SourceExpandedPath="\\Server2012R2.sandbox.local\sysvol\sandbox.local\Policies\{BFD9A355-3D80-4D03-9F9C-86353E1B2BFB}\Machine\Microsoft\Windows NT\SecEdit\GptTmpl.inf" bkp:Location="DomainSysvol\GPO\Machine\Microsoft\Windows NT\SecEdit\GptTmpl.inf"/><FSObjectDir bkp:Path="%GPO_MACH_FSPATH%\Scripts" bkp:SourceExpandedPath="\\Server2012R2.sandbox.local\sysvol\sandbox.local\Policies\{BFD9A355-3D80-4D03-9F9C-86353E1B2BFB}\Machine\Scripts" bkp:Location="DomainSysvol\GPO\Machine\Scripts"/><FSObjectDir bkp:Path="%GPO_MACH_FSPATH%\Scripts\Shutdown" bkp:SourceExpandedPath="\\Server2012R2.sandbox.local\sysvol\sandbox.local\Policies\{BFD9A355-3D80-4D03-9F9C-86353E1B2BFB}\Machine\Scripts\Shutdown" bkp:Location="DomainSysvol\GPO\Machine\Scripts\Shutdown"/><FSObjectDir bkp:Path="%GPO_MACH_FSPATH%\Scripts\Startup" bkp:SourceExpandedPath="\\Server2012R2.sandbox.local\sysvol\sandbox.local\Policies\{BFD9A355-3D80-4D03-9F9C-86353E1B2BFB}\Machine\Scripts\Startup" bkp:Location="DomainSysvol\GPO\Machine\Scripts\Startup"/></GroupPolicyExtension></GroupPolicyObject>
+</GroupPolicyBackupScheme>
