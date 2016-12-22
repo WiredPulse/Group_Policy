@@ -2,10 +2,7 @@
 A series of GPO templates<br>
 <br>
 
-# Firewall
-### Computer Configuration -> Windows Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security
-- Enable Logging : Properties -> Logging
-- Disable rules created locally to merge with GPO rules : Properties -> Settings -> Rule Merging
+
 
 # Blocking DNS Tunneling
 ### Computer Configuration -> Windows Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Outbound Rules
@@ -14,7 +11,9 @@ A series of GPO templates<br>
 
 # Enable WMI
 ### Computer Configuration -> Windows Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Outbound Rules
-- Inbound Rules : Select the predefined rule for Windows Management Instrumentation. This will create three rules, allowing WMI inbound. Also needed for this to work is 
+- Inbound Rules : Select the predefined rule for Windows Management Instrumentation and this will create three rules.
+### Computer Configuration -> Administrative Templates -> Network Connections -> Windows Firewall -> Domain Profile (Do Standard Profile as well)
+- Windows Firewall: Allow inbound remote administration exception : Enabled it and add the applicable IP(s).
 
 # Allow ICMP
 ### Computer Configuration -> Administrative Templates -> Network Connections -> Windows Firewall -> Domain Profile (Do Standard Profile as well)
@@ -22,7 +21,7 @@ A series of GPO templates<br>
 
 # Allow SMB
 ### Computer Configuration -> Administrative Templates -> Network Connections -> Windows Firewall -> Domain Profile (Do Standard Profile as well)
-- Windows Firewall:All inbound file and printer sharing exception : Enabled it and add the applicable IP. Once done, this will allow SMB. traffic from the specified IPs.
+- Windows Firewall:All inbound file and printer sharing exception : Enabled it and add the applicable IP(s). Once done, this will allow SMB. traffic from the specified IPs.
 
 # Disable Command Prompt
 ### User Configuration -> Policies -> Administrative Templates -> System
@@ -32,12 +31,16 @@ A series of GPO templates<br>
 ### User Configuration -> Policies -> Administrative Template -> Windows PowerShell
 - Turn on Script Execution : Enable it and select the applicable Execution Policy
 
+# Firewall Settings
+### Computer Configuration -> Windows Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security
+- Enable Logging : Properties -> Logging
+- Disable rules created locally to merge with GPO rules : Properties -> Settings -> Rule Merging
 
-# Enable Remote Registry
+# Enable "Last Modified" Value
 ### Computer Configuration -> Preferences -> Windows Settings -> Registry
 - NtfsDisableLastAccessUpdate : This Value is in HKLM\System\CurrentControlSet\Control\FileSystem and the Value data should be "0"
 
-#
+# Enable Remote Registry
 ### Computer Configuration -> Policies -> Windows Settings -> Security Settings -> System Services
 - RemoteRegistry : Define the Policy and set it to Automatic
 
