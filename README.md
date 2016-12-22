@@ -11,7 +11,7 @@ A series of GPO templates<br>
 
 # Enable WMI
 ### Computer Configuration -> Windows Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Outbound Rules
-- Inbound Rules : Select the predefined rule for Windows Management Instrumentation and this will create three rules.
+- Inbound Rules : Select the predefined rule for Windows Management Instrumentation and this will create three rules.<br>
 ### Computer Configuration -> Administrative Templates -> Network Connections -> Windows Firewall -> Domain Profile (Do Standard Profile as well)
 - Windows Firewall: Allow inbound remote administration exception : Enabled it and add the applicable IP(s).
 
