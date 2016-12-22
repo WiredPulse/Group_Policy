@@ -7,7 +7,7 @@ Computer Configuration -> Windows Settings -> Windows Firewall with Advanced Sec
 <br>
 - Enable Logging : Properties -> Logging
 - Disable rules created locally to merge with GPO rules : Properties -> Settings -> Rule Merging
-<br>
+<br><br>
 Computer Configuration -> Windows Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Outbound Rules<br>
 - Outbound Rules : Block Port 53 traffic to a specific IP. Be sure to select "Custom" when making the rule.
 - Outbound Rules : Block port 53 traffic to all IPs except for one. For example, say we want to allow port 53 traffic to 174.7.6.100. We can block 0.0.0.1 - 174.7.6.99 and 174.7.6.101 - 255.255.255.255. Notice we didn't list 174.7.6.100 as an IP to block. Be sure to select "Custom" when making the rule.
