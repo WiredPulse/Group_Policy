@@ -3,7 +3,7 @@ A series of GPO templates<br>
 <br>
 
 # Firewall
-### Computer Configuration -> Windows Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...
+### Computer Configuration -> Windows Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security
 <br><br>
 - Enable Logging : Properties -> Logging
 - Disable rules created locally to merge with GPO rules : Properties -> Settings -> Rule Merging
