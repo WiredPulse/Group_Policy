@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RegistrySettings clsid="{A3CCFC41-DFDB-43a5-8D26-0FE8B954DA51}"><Registry clsid="{9CD4B2F4-923D-47f5-A062-E897DD1DAD50}" name="NtfsDisableLastAccessUpdate" status="NtfsDisableLastAccessUpdate" image="12" changed="2016-10-10 15:31:52" uid="{81AEA5A4-09A5-41F0-9ADA-167BC43D0FA4}"><Properties action="U" displayDecimal="0" default="0" hive="HKEY_LOCAL_MACHINE" key="SYSTEM\CurrentControlSet\Control\FileSystem" name="NtfsDisableLastAccessUpdate" type="REG_DWORD" value="00000000"/></Registry>
-</RegistrySettings>
