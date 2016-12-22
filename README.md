@@ -12,5 +12,5 @@ A series of GPO templates<br>
 - Outbound Rules : Block port 53 traffic to all IPs except for one. For example, say we want to allow port 53 traffic to 174.7.6.100. We can block 0.0.0.1 - 174.7.6.99 and 174.7.6.101 - 255.255.255.255. Notice we didn't list 174.7.6.100 as an IP to block. Be sure to select "Custom" when making the rule.
 
 ### Computer Configuration -> Administrative Templates -> Network Connections -> Windows Firewall -> Domain Profile (Do Standard Profile as well)
-- Windows Firewall : Allow ICMP Exceptions (Enabled)
-- Windows Firewall : All inbound file and printer sharing exception (Enabled and add the applicable IP)
+- Windows Firewall : Allow ICMP Exceptions (Enabled). This will allow ICMP traffic.
+- Windows Firewall : All inbound file and printer sharing exception (Enabled and add the applicable IP). This will allow SMB traffic from the specified IPs.
