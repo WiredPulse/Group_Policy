@@ -39,7 +39,11 @@ A series of GPO templates<br>
 
 # Enable "Last Modified" Value
 ### Computer Configuration -> Preferences -> Windows Settings -> Registry
-- NtfsDisableLastAccessUpdate : This Value is in HKLM\System\CurrentControlSet\Control\FileSystem and the Value data should be "0"
+- NtfsDisableLastAccessUpdate : CHANGE this Value in HKLM\System\CurrentControlSet\Control\FileSystem to be "0"
+
+# Disable VBS
+### Computer Configuration -> Preferences -> Windows Settings -> Registry
+- Enabled : CREATE this Value in HKLM\Software\Microsoft\Windows Script Host\Settings and set it (REG_DWORD) to "0"
 
 # Enable Remote Registry
 ### Computer Configuration -> Policies -> Windows Settings -> Security Settings -> System Services
