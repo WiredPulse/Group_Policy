@@ -43,7 +43,7 @@ A series of GPO templates<br>
 
 # Disable VBS
 ### Computer Configuration -> Preferences -> Windows Settings -> Registry
-- Enabled : CREATE this Value in HKLM\Software\Microsoft\Windows Script Host\Settings and set it (REG_DWORD) to "0"
+- Enabled (Value Name) : CREATE this Value in HKLM\Software\Microsoft\Windows Script Host\Settings and set it (REG_DWORD) to "0"
 
 # Enable Remote Registry
 ### Computer Configuration -> Policies -> Windows Settings -> Security Settings -> System Services
@@ -52,3 +52,7 @@ A series of GPO templates<br>
 # Set Who Can Add Systems to the Domain
 ### Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> User Rights Assignment
 - Add Workstations to the Domain : Enable this and speicify a group. If this is not defined, every authenticated domain user can add 10 workstations to the domain by default.
+
+# Enable Prefetch (Disabled by default on Servers)
+### Computer Configuration -> Preferences -> Windows Settings -> Registry
+- EnablePrefetcher (Value Name) : UPDATE this Value in HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters and set it to (REG_DWORD) to "3"
