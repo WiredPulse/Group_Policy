@@ -49,4 +49,6 @@ A series of GPO templates<br>
 ### Computer Configuration -> Policies -> Windows Settings -> Security Settings -> System Services
 - RemoteRegistry : Define the Policy and set it to Automatic
 
-
+# Set Who Can Add Systems to the Domain
+### Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> User Rights Assignment
+- Add Workstations to the Domain : Enable this and speicify a group. If this is not defined, every authenticated domain user can add 10 workstations to the domain by default.
