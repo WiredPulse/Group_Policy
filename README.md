@@ -55,4 +55,12 @@ A series of GPO templates<br>
 
 # Enable Prefetch (Disabled by default on Servers)
 ### Computer Configuration -> Preferences -> Windows Settings -> Registry
-- EnablePrefetcher (Value Name) : UPDATE this Value in HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters and set it to (REG_DWORD) to "3"
+- EnablePrefetcher (Value Name) : UPDATE this Value in HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters and set it to (REG_DWORD) to "3".
+
+# Disable IPv6
+### Computer Configuration -> Preferences -> Windows Settings -> Registry
+- DisabledComponents (Value Name) : CREATE this Value in HKLM\SYSTEM\CurrentControlSet\Services\TCPIP6\Parameters and set it to (REG_DWORD)"ffffffff".
+
+# Disable Wireless
+### Computer Configuration -> Policies -> Windows Settings -> Security Settings -> Wireless Network (IEEE 802.11) Policies
+Create a new policy. On the General tab, check the option to "Use Windows WLAN AutoCOnfig service for clients". On the Network Permissions tab, check the options for "Prevent connections to ad-hoc networks" and "Prevent connections to infrastructure networks".
