@@ -63,4 +63,4 @@ A series of GPO templates<br>
 
 # Disable Wireless
 ### Computer Configuration -> Policies -> Windows Settings -> Security Settings -> Wireless Network (IEEE 802.11) Policies
-Create a new policy. On the General tab, check the option to "Use Windows WLAN AutoCOnfig service for clients". On the Network Permissions tab, check the options for "Prevent connections to ad-hoc networks" and "Prevent connections to infrastructure networks".
+- New Wireless Network Policy for Windows Vista and later : Create a new policy. On the General tab, check the option to "Use Windows WLAN AutoCOnfig service for clients". On the Network Permissions tab, check the options for "Prevent connections to ad-hoc networks" and "Prevent connections to infrastructure networks".
