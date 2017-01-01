@@ -16,6 +16,11 @@ A series of GPO templates<br>
 ### Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Outbound Rules
 - Outbound Rules : Drops all traffic to a specific host. The rule should have the following settings: Custom Rule, All Programs, Protocol Type: Any, Local Address: Any IP, Remote Address: <SPECIFY BAD IP HERE>, Block connection.
 
+# Firewall Settings
+### Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security
+- Enable Logging : Properties -> Logging
+- Disable rules created locally to merge with GPO rules : Properties -> Settings -> Rule Merging
+
 # Enable WMI
 ### Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Inbound Rules
 - Inbound Rules : Select the predefined rule for Windows Management Instrumentation and this will create three rules.
@@ -35,22 +40,17 @@ A series of GPO templates<br>
 ### User Configuration -> Policies -> Administrative Templates -> System
 - Prevent access to the command prompt : Enabled it and the command prompt will be disabled
 
+# Disable VBS
+### Computer Configuration -> Preferences -> Windows Settings -> Registry
+- Enabled (Value Name) : CREATE this Value in HKLM\Software\Microsoft\Windows Script Host\Settings and set it (REG_DWORD) to "0"
+
 # Enable PowerShell Execution Policy
 ### User Configuration -> Policies -> Administrative Template -> Windows PowerShell
 - Turn on Script Execution : Enable it and select the applicable Execution Policy
 
-# Firewall Settings
-### Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security
-- Enable Logging : Properties -> Logging
-- Disable rules created locally to merge with GPO rules : Properties -> Settings -> Rule Merging
-
 # Enable "Last Modified" Value
 ### Computer Configuration -> Preferences -> Windows Settings -> Registry
 - NtfsDisableLastAccessUpdate : CHANGE this Value in HKLM\System\CurrentControlSet\Control\FileSystem to be "0"
-
-# Disable VBS
-### Computer Configuration -> Preferences -> Windows Settings -> Registry
-- Enabled (Value Name) : CREATE this Value in HKLM\Software\Microsoft\Windows Script Host\Settings and set it (REG_DWORD) to "0"
 
 # Enable Remote Registry
 ### Computer Configuration -> Policies -> Windows Settings -> Security Settings -> System Services
