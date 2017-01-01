@@ -44,6 +44,10 @@ A series of GPO templates<br>
 ### Computer Configuration -> Preferences -> Windows Settings -> Registry
 - Enabled (Value Name) : CREATE this Value in HKLM\Software\Microsoft\Windows Script Host\Settings and set it (REG_DWORD) to "0"
 
+# Enable PowerShell Module Logging
+### Computer Configuration -> Administrative Templates -> Windows Components -> Windows PowerShell
+- Turn on Module Logging : Input "Microsoft.Powershell.*" and "Microsoft.WSman.management". This will generate Event ID 4103 (Application & Service Logs -> Microsoft -> Windows -> PowerShell -> Operational) and works with PowerShell v3 and newer.
+
 # Enable PowerShell Execution Policy
 ### User Configuration -> Policies -> Administrative Template -> Windows PowerShell
 - Turn on Script Execution : Enable it and select the applicable Execution Policy
@@ -80,6 +84,4 @@ Accounts: Rename Administrator Account : Input the name you want to account to b
 ### Computer Configuration -> Preferences -> Control Panel Settings -> Scheduled Tasks
 - Create a new task. The Action is "Update", Run should be "powershell.exe", and Argument should be "/c net user <acount name> /ACTIVE:no. Don't select the "Run As" option. Set the task to run at two hours from the time this policy is made. That will allow enough time for a GPO update. If you have a method to update Group Policy before that, make the kick-off time sooner than 2 hours. The Administrator account should be renamed before disabling it. 
 
-# Enable PowerShell Module Logging
-### Computer Configuration -> Administrative Templates -> Windows Components -> Windows PowerShell
-- Turn on Module Logging : Input "Microsoft.Powershell.*" and "Microsoft.WSman.management". This will generate Event ID 4103 (Application & Service Logs -> Microsoft -> Windows -> PowerShell -> Operational) and works with PowerShell v3 and newer.
+
