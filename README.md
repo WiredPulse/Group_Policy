@@ -9,9 +9,12 @@ A series of GPO templates<br>
 - Outbound Rules : Block Port 53 traffic to a specific IP. Be sure to select "Custom" when making the rule.
 - Outbound Rules : Block port 53 traffic to all IPs except for one. For example, say we want to allow port 53 traffic to 174.7.6.100. We can block 0.0.0.1 - 174.7.6.99 and 174.7.6.101 - 255.255.255.255. Notice we didn't list 174.7.6.100 as an IP to block. Be sure to select "Custom" when making the rule.
 
-# Isolate System Traffic
+# Block Malicious Host
 ### Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Inbound Rules
 - Inbound Rules : Drops all traffic from a specific host. The rule should have the following settings: Custom Rule, All Programs, Protocol Type: Any, Local Address: Any IP, Remote Address: <SPECIFY BAD IP HERE>, Block connection.
+
+### Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Outbound Rules
+- Outbound Rules : Drops all traffic to a specific host. The rule should have the following settings: Custom Rule, All Programs, Protocol Type: Any, Local Address: Any IP, Remote Address: <SPECIFY BAD IP HERE>, Block connection.
 
 # Enable WMI
 ### Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Inbound Rules
