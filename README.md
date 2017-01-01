@@ -9,8 +9,12 @@ A series of GPO templates<br>
 - Outbound Rules : Block Port 53 traffic to a specific IP. Be sure to select "Custom" when making the rule.
 - Outbound Rules : Block port 53 traffic to all IPs except for one. For example, say we want to allow port 53 traffic to 174.7.6.100. We can block 0.0.0.1 - 174.7.6.99 and 174.7.6.101 - 255.255.255.255. Notice we didn't list 174.7.6.100 as an IP to block. Be sure to select "Custom" when making the rule.
 
+# Isolate System Traffic
+### Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Inbound Rules
+- Inbound Rules : Drops all traffic from a specific host. The rule should have the following settings: Custom Rule, All Programs, Protocol Type: Any, Local Address: Any IP, Remote Address: <SPECIFY BAD IP HERE>, Block connection.
+
 # Enable WMI
-### Computer Configuration -> Windows Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Outbound Rules
+### Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security...-> Inbound Rules
 - Inbound Rules : Select the predefined rule for Windows Management Instrumentation and this will create three rules.
 
 ### Computer Configuration -> Administrative Templates -> Network Connections -> Windows Firewall -> Domain Profile (Do Standard Profile as well)
@@ -33,7 +37,7 @@ A series of GPO templates<br>
 - Turn on Script Execution : Enable it and select the applicable Execution Policy
 
 # Firewall Settings
-### Computer Configuration -> Windows Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security
+### Computer Configuration -> Windows Settings -> Security Settings -> Windows Firewall with Advanced Security -> Windows Firewall with Advanced Security
 - Enable Logging : Properties -> Logging
 - Disable rules created locally to merge with GPO rules : Properties -> Settings -> Rule Merging
 
@@ -72,3 +76,4 @@ Accounts: Rename Administrator Account : Input the name you want to account to b
 # Disable local Administrator account
 ### Computer Configuration -> Preferences -> Control Panel Settings -> Scheduled Tasks
 - Create a new task. The Action is "Update", Run should be "powershell.exe", and Argument should be "/c net user <acount name> /ACTIVE:no. Don't select the "Run As" option. Set the task to run at two hours from the time this policy is made. That will allow enough time for a GPO update. If you have a method to update Group Policy before that, make the kick-off time sooner than 2 hours. The Administrator account should be renamed before disabling it. 
+
