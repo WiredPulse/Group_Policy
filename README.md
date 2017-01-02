@@ -44,9 +44,17 @@ A series of GPO templates<br>
 ### Computer Configuration -> Preferences -> Windows Settings -> Registry
 - Enabled (Value Name) : CREATE this Value in HKLM\Software\Microsoft\Windows Script Host\Settings and set it (REG_DWORD) to "0"
 
-# Enable PowerShell Module Logging
-### Computer Configuration -> Administrative Templates -> Windows Components -> Windows PowerShell
-- Turn on Module Logging : Input "Microsoft.Powershell.*" and "Microsoft.WSman.management". This will generate Event ID 4103 (Application & Service Logs -> Microsoft -> Windows -> PowerShell -> Operational) and works with PowerShell v3 and newer.
+# Enable PowerShell Module Logging (v3 and above)
+### Computer Configuration -> Policies -> Administrative Templates -> Windows Components -> Windows PowerShell
+- Turn on Module Logging : Input "*". This will generate Event ID 4103 (Application & Service Logs -> Microsoft -> Windows -> PowerShell -> Operational) and works with PowerShell v3 and newer.
+
+# EnablePowerShell Transcription (v5 and above)
+### Computer Configuration -> Policies -> Administrative Templates -> Windows PowerShell
+- Turn on PowerShell Transcription - Input a directory to store the data. If no directory is configured, the data will be stored in the user's Documents folder. Select the option to include invocation headers.
+
+# Enable PowerShell Script Logging (v5 and above)
+### Computer Configuration -> Policies -> Administrative Templates -> Windows PowerShell
+- Turn on PowerShell Script Block Logging - Select the option to log start\stop events. Enabling this policy will generate Event IDs 4104, 4105, and 4106 (Application & Service Logs -> Microsoft -> Windows -> PowerShell -> Operational) and works with PowerShell v5 and newer.
 
 # Enable PowerShell Execution Policy
 ### User Configuration -> Policies -> Administrative Template -> Windows PowerShell
