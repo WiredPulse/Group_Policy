@@ -48,7 +48,7 @@ A series of GPO templates<br>
 ### Computer Configuration -> Policies -> Administrative Templates -> Windows Components -> Windows PowerShell
 - Turn on Module Logging : Input "*". This will generate Event ID 4103 (Application & Service Logs -> Microsoft -> Windows -> PowerShell -> Operational) and works with PowerShell v3 and newer.
 
-# EnablePowerShell Transcription (v5 and above)
+# Enable PowerShell Transcription (v5 and above)
 ### Computer Configuration -> Policies -> Administrative Templates -> Windows PowerShell
 - Turn on PowerShell Transcription - Input a directory to store the data. If no directory is configured, the data will be stored in the user's Documents folder. Select the option to include invocation headers.
 
