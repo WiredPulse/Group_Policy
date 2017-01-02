@@ -90,6 +90,9 @@ Accounts: Rename Administrator Account : Input the name you want to account to b
 
 # Disable local Administrator account
 ### Computer Configuration -> Preferences -> Control Panel Settings -> Scheduled Tasks
-- Create a new task. The Action is "Update", Run should be "powershell.exe", and Argument should be "/c net user <acount name> /ACTIVE:no. Don't select the "Run As" option. Set the task to run at two hours from the time this policy is made. That will allow enough time for a GPO update. If you have a method to update Group Policy before that, make the kick-off time sooner than 2 hours. The Administrator account should be renamed before disabling it. 
+- Create a new task. The Action is "Update", Run should be "powershell.exe", and Argument should be "/c net user <acount name> /ACTIVE:no". Don't select the "Run As" option. Set the task to run at two hours from the time this policy is made. That will allow enough time for a GPO update. If you have a method to update Group Policy before that, make the kick-off time sooner than 2 hours. The Administrator account should be renamed before disabling it. 
 
+# Set Timezone
+### Computer Configuration -> Preferences -> Control Panel Settings -> Scheduled Tasks
+- Create a new task. The Action is "Create", Run should be "tzutil.exe", and Argument should be '/s "Eastern Standard Time"'. Don't select the "Run As" option. Set the task to run every hour or so (environment dependent).
 
